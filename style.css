@@ -41,8 +41,8 @@ body{
 #close{
     display: none;
     position: fixed;
-    top: 8%;
-    right: 30%;
+    top: 3%;
+    right: 27%;
 }
 
 #closeButton{
@@ -54,7 +54,7 @@ body{
     display: none;
     position: fixed;
     bottom: 15%;
-    left: 30%;
+    left: 27%;
 }
 #backArrow{
     height: 50px;
@@ -65,7 +65,7 @@ body{
     display: none;
     position: fixed;
     bottom: 15%;
-    right: 30%;
+    right: 27%;
 }
 
 #forwardArrow{

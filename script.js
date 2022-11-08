@@ -97,3 +97,25 @@ function enlarge(id){
 }
 
 /** close button*/
+document.getElementById("closeButton").onclick = function() {close()}
+
+function close(){
+    document.getElementById("largeImage1").style.display = "none";
+    document.getElementById("largeImage2").style.display = "none";
+    document.getElementById("largeImage3").style.display = "none";
+    document.getElementById("largeImage4").style.display = "none";
+    document.getElementById("largeImage5").style.display = "none";
+    document.getElementById("largeImage6").style.display = "none";
+    document.getElementById("largeImage7").style.display = "none";
+    document.getElementById("largeImage8").style.display = "none";
+    document.getElementById("largeImage9").style.display = "none";
+    document.getElementById("largeImage10").style.display = "none";
+    document.getElementById("largeImage11").style.display = "none";
+    document.getElementById("largeImage12").style.display = "none";
+
+    document.getElementById("close").style.display = "none";
+    document.getElementById("back").style.display = "none";
+    document.getElementById("forward").style.display = "none";
+
+    console.log(3);
+}
