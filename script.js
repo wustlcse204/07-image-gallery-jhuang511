@@ -16,17 +16,19 @@ function hoverImage() {
  */
 
 /** initialize image variables using an array */
-var image1 = document.getElementById("image1");
-var image2 = document.getElementById("image2");
-var image3 = document.getElementById("image3");
-var image4 = document.getElementById("image4");
-var image5 = document.getElementById("image5");
-var image6 = document.getElementById("image7");
-var image8 = document.getElementById("image8");
-var image9 = document.getElementById("image9");
-var image10 = document.getElementById("image10");
-var image11 = document.getElementById("image11");
-var image12 = document.getElementById("image12");
+var image1 = document.getElementById("largeImage1");
+var image2 = document.getElementById("largeImage2");
+var image3 = document.getElementById("largeImage3");
+var image4 = document.getElementById("largeImage4");
+var image5 = document.getElementById("largeImage5");
+var image6 = document.getElementById("largeImage6");
+var image7 = document.getElementById("largeImage7");
+var image8 = document.getElementById("largeImage8");
+var image9 = document.getElementById("largeImage9");
+var image10 = document.getElementById("largeImage10");
+var image11 = document.getElementById("largeImage11");
+var image12 = document.getElementById("largeImage12");
+var arrayIndex = 0;
 
 let imageArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12];
 
@@ -94,6 +96,8 @@ function enlarge(id){
     document.getElementById("close").style.display = "block";
     document.getElementById("back").style.display = "block";
     document.getElementById("forward").style.display = "block";
+
+    arrayIndex = parseInt(id.replace("largeImage", ""));
 }
 
 /** close button*/
@@ -118,4 +122,39 @@ function close(){
     document.getElementById("forward").style.display = "none";
 
     console.log(3);
+}
+
+/** back*/
+document.getElementById("backArrow").onclick = function() {back()}
+
+function back(){
+    var idName = "largeImage" + String(arrayIndex);
+
+    document.getElementById(idName).style.display = "none";
+    if (arrayIndex > 1) {
+        arrayIndex--;
+    }
+    else {
+        arrayIndex = 11;
+    }
+    idName = "largeImage" + String(arrayIndex);
+    document.getElementById(idName).style.display = "block";
+}
+
+/** forward*/
+document.getElementById("forwardArrow").onclick = function() {forward()}
+
+function forward(){
+    var idName = "largeImage" + String(arrayIndex);
+
+    document.getElementById(idName).style.display = "none";
+    if (arrayIndex < 12) {
+        arrayIndex++;
+    }
+    else {
+        arrayIndex = 1;
+    }
+
+    idName = "largeImage" + String(arrayIndex);
+    document.getElementById(idName).style.display = "block";
 }
