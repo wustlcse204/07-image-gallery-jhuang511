@@ -74,10 +74,26 @@ function endHover(id){
     document.getElementById(id).style.border = "25px solid #464545";
 }
 
-/** on click, enlarge image*/
-document.getElementById("image1").onclick = function() {enlarge("image1")};
+/** enlarge image*/
+document.getElementById("image1").onclick = function() {enlarge("largeImage1")};
+document.getElementById("image2").onclick = function() {enlarge("largeImage2")};
+document.getElementById("image3").onclick = function() {enlarge("largeImage3")};
+document.getElementById("image4").onclick = function() {enlarge("largeImage4")};
+document.getElementById("image5").onclick = function() {enlarge("largeImage5")};
+document.getElementById("image6").onclick = function() {enlarge("largeImage6")};
+document.getElementById("image7").onclick = function() {enlarge("largeImage7")};
+document.getElementById("image8").onclick = function() {enlarge("largeImage8")};
+document.getElementById("image9").onclick = function() {enlarge("largeImage9")};
+document.getElementById("image10").onclick = function() {enlarge("largeImage10")};
+document.getElementById("image11").onclick = function() {enlarge("largeImage11")};
+document.getElementById("image12").onclick = function() {enlarge("largeImage12")};
+
 
 function enlarge(id){
-    image = document.getElementById(id);
-    image.style.transform = "scale(2.5)";
+    document.getElementById(id).style.display = "block";
+    document.getElementById("close").style.display = "block";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("forward").style.display = "block";
 }
+
+/** close button*/
